@@ -1,4 +1,9 @@
-<a routerLink="/landing/market/collection/men">Men's collection</a>
-<a routerLink="/landing/market/collection/women">Women's collection</a>
+<div class="category-tab">
+    <button routerLink="/landing/market/collection/men" mat-raised-button color="primary">Men's collection</button>
+    <button routerLink="/landing/market/collection/women" mat-raised-button color="primary">Women's collection</button>
+</div>
+<div class="category-content">
+    <router-outlet></router-outlet>
+</div>
 
-<router-outlet></router-outlet>
+

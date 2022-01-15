@@ -1,0 +1,15 @@
+<mat-card *ngFor="let item of list" class="example-card">
+    <mat-card-title-group>
+      <mat-card-title>{{item.name}}</mat-card-title>
+      <mat-card-subtitle>{{item.size}}</mat-card-subtitle>
+      <img mat-card-sm-image [src]="item.img">
+    </mat-card-title-group>
+    <mat-card-content>
+        {{item.desc}}
+    </mat-card-content>
+    <div>
+      <button mat-raised-button color="warn" (click)="delete(item.id)">Delete</button>
+    </div>
+</mat-card>
+
+

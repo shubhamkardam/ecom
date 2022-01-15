@@ -1,3 +1,6 @@
 <div>
-    Inside {{collectionName}}
+    Hello , This is {{collectionName}}
 </div>
+
+Collections:
+<app-collections-items [list]="mainList" (deleteitem)="del($event)"></app-collections-items>
