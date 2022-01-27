@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Template } from '@angular/compiler/src/render3/r3_ast';
+import { Component, ElementRef, OnInit, Output, ViewChild } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -13,10 +14,19 @@ export class LoginComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   hide = true;
   error=false;
+  user:string;
   username:string;
   password:string;
 
-  constructor(private router:Router) { }
+
+  @ViewChild('test', {static:true}) something:ElementRef;
+
+  constructor(
+      private router:Router
+    ) { 
+    
+
+  }
 
   ngOnInit(): void {
   }
@@ -27,7 +37,7 @@ export class LoginComponent implements OnInit {
     }else{
       this.error=true;
     }
-    
+   this.something.nativeElement.value;
+   console.log(this.user);
   }
-
 }

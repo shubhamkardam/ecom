@@ -11,6 +11,8 @@ export class CollectionsItemsComponent implements OnInit {
   @Input() list:any;
   @Output() deleteitem = new EventEmitter();
 
+  dateexample = new Date();
+
   constructor() { }
 
   delete(value:number){

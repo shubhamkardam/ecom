@@ -1,6 +1,10 @@
 <div>
-    Hello , This is {{collectionName}}
+    Hello , This is {{collectionName | uppercase}}
+    {{pipeexample | date:'dd-MM-YYYY'}}
+    {{pipe2 | currency:'EUR'}}
+    {{pipe2 | percent}}
+    <!-- {{mainList | json}} -->
 </div>
 
 Collections:
-<app-collections-items [list]="mainList" (deleteitem)="del($event)"></app-collections-items>
+<app-collections-items #user [list]="mainList" (deleteitem)="del($event)"></app-collections-items>

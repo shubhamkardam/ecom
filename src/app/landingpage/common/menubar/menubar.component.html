@@ -5,9 +5,14 @@
       </button>
       <span>My App</span>
       <span class="example-spacer"></span>
-      
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <span routerLink="/login">Logout</span>
-      </button>
+
+      <div mat-button [matMenuTriggerFor]="menu">
+        <img class="login-img" src="./assets/img/profile.png" alt="">
+      </div>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Cart</button>
+        <button mat-menu-item>Profile</button>
+        <button mat-menu-item routerLink="/login">Logout</button>
+      </mat-menu>
     </mat-toolbar>
-  </p>
+</p>

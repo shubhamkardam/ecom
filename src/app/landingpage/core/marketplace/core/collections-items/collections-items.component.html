@@ -1,7 +1,39 @@
+<div>
+  <p>
+    {{list | json}}
+  </p>
+  <p>
+    {{4.123 | number:'1.2-3'}}
+  </p>
+  <p>
+    {{4.123 | number:'3.4-5'}}
+  </p>
+  <p>
+    {{4.123 | number:'3.1-2'}}
+  </p>
+  <p>
+    {{0.25 | percent}}
+  </p>
+  <p>
+    {{dateexample | date:'short'}}
+  </p>
+  <p>
+    {{dateexample | date:'shortDate'}}
+  </p>
+  <p>
+    {{dateexample | date:'shortTime'}}
+  </p>
+  <p>
+    {{dateexample | date:'dd-MM-YYYY'}}
+  </p>
+  
+</div>
+
 <mat-card *ngFor="let item of list" class="example-card">
     <mat-card-title-group>
-      <mat-card-title>{{item.name}}</mat-card-title>
-      <mat-card-subtitle>{{item.size}}</mat-card-subtitle>
+      <mat-card-title>{{item.name | titlecase}}</mat-card-title>
+      <mat-card-title>{{item.name | slice:1:5}}</mat-card-title>
+      <mat-card-subtitle>{{item.size | lowercase}}</mat-card-subtitle>
       <img mat-card-sm-image [src]="item.img">
     </mat-card-title-group>
     <mat-card-content>

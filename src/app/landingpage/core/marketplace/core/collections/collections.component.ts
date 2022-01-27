@@ -1,5 +1,5 @@
 import { isNgTemplate } from '@angular/compiler';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 interface items{
@@ -15,8 +15,9 @@ interface items{
   templateUrl: './collections.component.html',
   styleUrls: ['./collections.component.scss']
 })
-
 export class CollectionsComponent implements OnInit {
+
+  @ViewChild('user', {static:true}) something:ElementRef;
 
   womenItems : items[] = [
     {
@@ -35,22 +36,41 @@ export class CollectionsComponent implements OnInit {
     }
   ];
 
+  pipeexample = new Date();
+  pipe2 = 20/100;
+
   menItems : items[] = [
     {
       id:1,
-      name:'shirt',
+      name:'shirt1',
       size:'medium',
       img:'https://material.angular.io/assets/img/examples/shiba2.jpg',
       desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, nisi! Praesentium ea nostrum magni quis reiciendis assumenda expedita, cum quia quaerat debitis, soluta consectetur magnam impedit. Hic facilis ea eligendi.'
     },
     {
       id:2,
-      name:'t-shirt',
+      name:'t-shir2',
+      size:'small',
+      img:'https://material.angular.io/assets/img/examples/shiba2.jpg',
+      desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, nisi! Praesentium ea nostrum magni quis reiciendis assumenda expedita, cum quia quaerat debitis, soluta consectetur magnam impedit. Hic facilis ea eligendi.'
+    },
+    {
+      id:3,
+      name:'t-shirt3',
+      size:'small',
+      img:'https://material.angular.io/assets/img/examples/shiba2.jpg',
+      desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, nisi! Praesentium ea nostrum magni quis reiciendis assumenda expedita, cum quia quaerat debitis, soluta consectetur magnam impedit. Hic facilis ea eligendi.'
+    },
+    {
+      id:4,
+      name:'t-shirt4',
       size:'small',
       img:'https://material.angular.io/assets/img/examples/shiba2.jpg',
       desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, nisi! Praesentium ea nostrum magni quis reiciendis assumenda expedita, cum quia quaerat debitis, soluta consectetur magnam impedit. Hic facilis ea eligendi.'
     }
   ]
+
+  
     
 
 
