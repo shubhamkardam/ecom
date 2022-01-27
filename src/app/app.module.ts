@@ -25,6 +25,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatMenuModule} from '@angular/material/menu';
 import { CollectionsItemsComponent } from './landingpage/core/marketplace/core/collections-items/collections-items.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CollectionsItemsComponent } from './landingpage/core/marketplace/core/c
     ContactusComponent,
     MarketplaceComponent,
     CollectionsComponent,
-    CollectionsItemsComponent
+    CollectionsItemsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

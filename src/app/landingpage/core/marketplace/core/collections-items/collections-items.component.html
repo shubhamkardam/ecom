@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <p>
     {{list | json}}
   </p>
@@ -27,9 +27,11 @@
     {{dateexample | date:'dd-MM-YYYY'}}
   </p>
   
-</div>
+</div> -->
 
-<mat-card *ngFor="let item of list" class="example-card">
+<input type="text" [(ngModel)]="searchTxt">
+
+<mat-card *ngFor="let item of list | filter: searchTxt" class="example-card">
     <mat-card-title-group>
       <mat-card-title>{{item.name | titlecase}}</mat-card-title>
       <mat-card-title>{{item.name | slice:1:5}}</mat-card-title>

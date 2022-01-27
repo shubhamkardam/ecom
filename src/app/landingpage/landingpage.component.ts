@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalService } from '../services/global.service';
 
 @Component({
   selector: 'app-landingpage',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingpageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public globalService: GlobalService) { }
 
   ngOnInit(): void {
+    console.log(this.globalService.userName);
   }
 
 }
